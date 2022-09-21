@@ -1,0 +1,25 @@
+<% include partials/header %>
+    <h1>Compose</h1>
+
+    <form action="/compose" method="post">
+   
+        <div class="input-group input-group-lg form-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Title</span>
+            </div>
+            <input type="text" autocomplete="off" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-lg" name="posting" style="width: 1000px;">
+        </div>
+
+        <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Content</span>
+            </div>
+            <textarea name="bodyContent" class="form-control" aria-label="With textarea" style="width: 1000px; height: 200px;"></textarea>
+          </div>
+          
+        
+        <button type="submit" class="btn  btn-outline-primary">Publish</button>
+        
+    </form>
+
+    <% include partials/footer %>
