@@ -87,8 +87,7 @@ app.post("/admin", function (req, res) {
   let email = req.body.email;
   let password = req.body.password;
 
-  console.log(email);
-  console.log(password);
+  
 
   if(email == id && password == pass){
       res.render("compose");
@@ -103,14 +102,13 @@ app.post("/admin", function (req, res) {
 app.get("/post/:postId", function (req, res) {
 
   var id = req.params.postId;
-  console.log(id);
+
 
   PostModel.findById(id, function (err, docs) { 
     if(err){
       console.log(err);
     }else{
-       console.log(docs);
-       console.log(docs.title);
+      
        let title = docs.title;
        let desc = docs.content;
         res.render("post", {header: docs.title , para: docs.content} );

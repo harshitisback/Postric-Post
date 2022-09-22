@@ -10,20 +10,29 @@
 
     <h1>Posts</h1>
 
+    <div class=" postarr ">
     <% postArray.forEach(i=> { %>
-        <h2>
-            <%= i.title %>
-        </h2>
-        <p>
-           
-            <%= i.content.substring(1,100) + "..." %> <a href="/post/<%= i._id %> ">Read more</a>
-        </p>
+       
+            <h2>
+                <%= i.title %>
+            </h2>
+            <p>
 
-        <%= i.day %>
+                <%= i.content.substring(1,100) + "..." %> <a href="/post/<%= i._id %> ">Read more</a>
+            </p>
 
-            <% });%>
+            <p class="post-para">
+                <%= i.day %>
+            </p>
+            
+            <br>
+     
+        <% });%>
+
+    </div>
 
 
 
 
-<% include partials/footer %>
+
+            <% include partials/footer %>
